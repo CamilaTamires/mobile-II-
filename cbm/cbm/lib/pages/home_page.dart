@@ -1,5 +1,5 @@
+import 'package:cbm/pages/formulario_page.dart';
 import 'package:flutter/material.dart';
-import 'qr_scanner_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -31,7 +31,6 @@ class HomePage extends StatelessWidget {
                     size: 30,
                   ),
                   onPressed: () {
-                    // Deslogar e voltar para login
                     Navigator.of(context).pushReplacementNamed('/login');
                   },
                 ),
@@ -46,7 +45,8 @@ class HomePage extends StatelessWidget {
               ),
               Positioned(
                 top: 25,
-                left: 63,
+                left: 0,
+                right: 0,
                 child: Stack(
                   alignment: Alignment.center,
                   children: [
@@ -77,20 +77,31 @@ class HomePage extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       ElevatedButton.icon(
-                        onPressed: () async {
-                          final result = await Navigator.push(
+                        onPressed: () {
+                          /* // CÓDIGO ANTIGO COM A CÂMERA (guardado para o futuro)
+                          final assetId = await Navigator.push<String>(
+                            context,
+                            MaterialPageRoute(builder: (context) => const QrScannerPage()),
+                          );
+
+                          if (assetId != null && context.mounted) {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => FormularioPage(assetId: assetId),
+                              ),
+                            );
+                          }
+                          */
+                          
+                          // ***** CORREÇÃO APLICADA AQUI *****
+                          // print('Pulando o scanner de QR Code para desenvolvimento.');
+                          Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const QrScannerPage(),
+                              builder: (context) => const FormularioPage(assetId: 'ATIVO-MONITOR-001'),
                             ),
                           );
-                          if (result != null) {
-                            // Aqui você pode redirecionar para o formulário
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              SnackBar(content: Text('Código lido: $result')),
-                            );
-                            // Por exemplo: Navigator.push para a FormPage passando o result
-                          }
                         },
                         icon: const Icon(Icons.camera_alt, color: Colors.white),
                         label: const Text('Abrir Chamado'),
@@ -100,7 +111,8 @@ class HomePage extends StatelessWidget {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8),
                           ),
-                          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 20, vertical: 12),
                         ),
                       ),
                       const SizedBox(height: 15),
@@ -116,7 +128,8 @@ class HomePage extends StatelessWidget {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8),
                           ),
-                          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 20, vertical: 12),
                         ),
                       ),
                     ],
