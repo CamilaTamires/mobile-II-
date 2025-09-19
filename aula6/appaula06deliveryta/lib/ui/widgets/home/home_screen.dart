@@ -1,7 +1,7 @@
 import 'package:appaula06deliveryta/data/categories_data.dart';
-import 'package:appaula06deliveryta/data/restaurant_data.dart';
-import 'package:appaula06deliveryta/model/restaurant.dart';
-import 'package:appaula06deliveryta/ui/_core/app_colors.dart';
+import 'package:appaula06deliveryta/data/restaurante_data.dart';
+import 'package:appaula06deliveryta/model/restaurante.dart';
+import 'package:appaula06deliveryta/ui/core/app_colors.dart';
 import 'package:appaula06deliveryta/ui/widgets/home/widgets/category_widget.dart';
 import 'package:appaula06deliveryta/ui/widgets/home/widgets/restaurant_widget.dart';
 import 'package:flutter/material.dart';

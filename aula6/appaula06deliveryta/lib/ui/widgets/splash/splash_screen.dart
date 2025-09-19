@@ -1,6 +1,7 @@
-import 'package:appaula06deliveryta/ui/_core/app_colors.dart';
-import 'package:appaula06deliveryta/ui/widgets/home/home_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:appaula06deliveryta/ui/core/app_colors.dart';
+// Removido o import da HomeScreen, pois agora vamos para AuthScreen
+import 'package:appaula06deliveryta/ui/widgets/auth/auth_screen.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -17,28 +18,42 @@ class SplashScreen extends StatelessWidget {
             Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                spacing: 32,
+                // Removido: spacing: 32, pois não existe essa propriedade em Column
                 children: [
-                  Image.asset('assets/logo.png',width: 192,),
+                  Image.asset('assets/logo.png', width: 192),
+                  const SizedBox(height: 32), // espaçamento manual
                   Column(
                     children: [
-                      Text('Um parceiro inovador para sua',
-                      style: TextStyle(color: Colors.white,fontSize: 22),),
-                      Text('Melhor experiência culinária', style: TextStyle(color: AppColors.mainColor,
-                      fontSize: 22, fontWeight: FontWeight.bold
-                      
-                      ),),
+                      const Text(
+                        'Um parceiro inovador para sua',
+                        style: TextStyle(color: Colors.white, fontSize: 22),
+                      ),
+                      Text(
+                        'Melhor experiência culinária',
+                        style: TextStyle(
+                          color: AppColors.mainColor,
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      const SizedBox(height: 24),
                       SizedBox(
                         width: double.infinity,
                         child: ElevatedButton(
-                          onPressed: (){
-                            Navigator.pushReplacement(context, MaterialPageRoute(
-                              builder: (context)=>HomeScreen()));
-                          }, child: Text('Bora')),
-                      )
+                          onPressed: () {
+                            Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const AuthScreen(),
+                              ),
+                            );
+                          },
+                          child: const Text('Bora'),
+                        ),
+                      ),
                     ],
                   )
-                  ],
+                ],
               ),
             )
           ],

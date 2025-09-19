@@ -1,5 +1,5 @@
 // importa as bibliotecas
-import 'package:appaula06deliveryta/model/restaurant.dart';
+import 'package:appaula06deliveryta/model/restaurante.dart';
 import 'package:appaula06deliveryta/ui/widgets/restaurant/restaurantscreen.dart';
 import 'package:flutter/material.dart';
 

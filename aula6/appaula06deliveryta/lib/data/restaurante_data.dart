@@ -1,5 +1,5 @@
 import 'dart:convert'; // biblioteca para converter json
-import 'package:appaula06deliveryta/model/restaurant.dart';
+import 'package:appaula06deliveryta/model/restaurante.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart'; // biblioteca para criar os widgets do flutter
 

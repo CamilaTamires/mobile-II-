@@ -1,5 +1,5 @@
-import 'package:appaula06deliveryta/data/restaurant_data.dart';
-import 'package:appaula06deliveryta/ui/_core/app_theme.dart';
+import 'package:appaula06deliveryta/data/restaurante_data.dart';
+import 'package:appaula06deliveryta/ui/core/app_theme.dart';
 import 'package:appaula06deliveryta/ui/widgets/bag_provider.dart';
 import 'package:appaula06deliveryta/ui/widgets/splash/splash_screen.dart';
 import 'package:flutter/material.dart';

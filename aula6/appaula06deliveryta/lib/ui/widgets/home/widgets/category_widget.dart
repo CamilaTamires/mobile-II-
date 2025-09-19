@@ -1,6 +1,6 @@
 // importa bibliotecas
 
-import 'package:appaula06deliveryta/ui/_core/app_colors.dart';
+import 'package:appaula06deliveryta/ui/core/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class CategoryWidget extends StatelessWidget {
